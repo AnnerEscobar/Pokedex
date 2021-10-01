@@ -7,6 +7,7 @@ package Graficos;
 
 import Datos.ModeloUsuarios;
 import Metodos.MetodosInicioSesion;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -153,11 +154,20 @@ public class Registro extends javax.swing.JFrame {
           m.setApellidos(txtApellidos.getText());
           if(me.ValidarCorreo(txtCorreo.getText())){
                m.setCorreo(txtCorreo.getText());
+          }else{
+               JOptionPane.showMessageDialog(null,"correo no valido");
           }
           if(me.CompararPass(txtPass.getText(), txtConfirmPass.getText())){
                m.setPassword(me.Encriptador(txtPass.getText(),10));
+          }else{
+               JOptionPane.showMessageDialog(null, "Las contrase;as no coinciden");
           }
+          if (me.registrar(m)) {
+                         JOptionPane.showMessageDialog(null, "Registro Exitosos");
           
+          }else{
+               JOptionPane.showMessageDialog(null,"Algo salio mal con el registro");
+          }
      }//GEN-LAST:event_jButton1ActionPerformed
 
      /**

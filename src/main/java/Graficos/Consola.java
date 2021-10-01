@@ -101,10 +101,10 @@ public class Consola extends javax.swing.JFrame {
           PokemonImagen = new javax.swing.JPanel();
           Lid = new javax.swing.JLabel();
           btnRetroceder = new javax.swing.JButton();
-          jLabel5 = new javax.swing.JLabel();
           jLabel6 = new javax.swing.JLabel();
-          jComboBox1 = new javax.swing.JComboBox<>();
+          jButton1 = new javax.swing.JButton();
           RaFavoritos = new javax.swing.JRadioButton();
+          labelUsuario = new javax.swing.JLabel();
           fondo = new javax.swing.JLabel();
 
           setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -135,13 +135,14 @@ public class Consola extends javax.swing.JFrame {
           Lexperiencia.setText("***");
           getContentPane().add(Lexperiencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, -1, -1));
 
-          btnInciar.setText("==>");
+          btnInciar.setIcon(new javax.swing.ImageIcon("C:\\Users\\anner\\Desktop\\Universidad Mariano Galvez\\Cuarto Semestre\\Programacion II\\Homeworks\\MiniPokedex\\src\\main\\java\\Imagenes\\botonderecha.png")); // NOI18N
+          btnInciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
           btnInciar.addActionListener(new java.awt.event.ActionListener() {
                public void actionPerformed(java.awt.event.ActionEvent evt) {
                     btnInciarActionPerformed(evt);
                }
           });
-          getContentPane().add(btnInciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, -1));
+          getContentPane().add(btnInciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 40, 30));
 
           jLabel1.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
           jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -181,45 +182,49 @@ public class Consola extends javax.swing.JFrame {
           Lid.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
           Lid.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
           Lid.setText("*");
-          getContentPane().add(Lid, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, 30, 20));
+          getContentPane().add(Lid, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, 30, 20));
 
-          btnRetroceder.setText("<==");
+          btnRetroceder.setIcon(new javax.swing.ImageIcon("C:\\Users\\anner\\Desktop\\Universidad Mariano Galvez\\Cuarto Semestre\\Programacion II\\Homeworks\\MiniPokedex\\src\\main\\java\\Imagenes\\botonizquierdo.png")); // NOI18N
+          btnRetroceder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
           btnRetroceder.addActionListener(new java.awt.event.ActionListener() {
                public void actionPerformed(java.awt.event.ActionEvent evt) {
                     btnRetrocederActionPerformed(evt);
                }
           });
-          getContentPane().add(btnRetroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 410, -1, -1));
-
-          jLabel5.setFont(new java.awt.Font("OCR A Extended", 1, 48)); // NOI18N
-          jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-          jLabel5.setText("+");
-          jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-               public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jLabel5MouseClicked(evt);
-               }
-          });
-          getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 351, 60, 60));
+          getContentPane().add(btnRetroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 40, 30));
 
           jLabel6.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
           jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
           jLabel6.setText("FAVORITOS");
           getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(662, 340, 90, -1));
 
-          jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Rare", "Mountain", "rough terrain", "sea", "cave", "rough terrain", "grassland", "forest", "urban" }));
-          getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 80, 30));
+          jButton1.setText("+");
+          jButton1.setActionCommand("");
+          jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+          jButton1.setFocusCycleRoot(true);
+          jButton1.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton1ActionPerformed(evt);
+               }
+          });
+          getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 360, 30, 40));
 
           RaFavoritos.setText("Favoritos");
-          getContentPane().add(RaFavoritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
+          getContentPane().add(RaFavoritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
+
+          labelUsuario.setText("Usuario");
+          getContentPane().add(labelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 130, -1));
 
           fondo.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
           fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\anner\\Desktop\\Universidad Mariano Galvez\\Cuarto Semestre\\Programacion II\\Homeworks\\MiniPokedex\\src\\main\\java\\Imagenes\\fondo1.1.png")); // NOI18N
-          getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 480));
+          fondo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+          getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 480));
 
           pack();
      }// </editor-fold>//GEN-END:initComponents
 
      private void btnInciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInciarActionPerformed
+
           dibujaElPokemonQueEstaEnLaPosicion(contador);
           metodo.TraerInformacion(contador);
           metodo.asignar(Lnombre, Laltura, Lpeso, Lespecie, Lcolor, Lhabitad, Lexperiencia, Lid);
@@ -235,45 +240,24 @@ public class Consola extends javax.swing.JFrame {
           //contador--;
      }//GEN-LAST:event_btnRetrocederActionPerformed
 
-     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-          // TODO add your handling code here:
-        
-          mu.setCorreo("annner@hotmail.com");
+     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          // TODO add your handling code here:  
+          mu.setCorreo(mu.getCorreo());
           m.setId(Integer.valueOf(Lid.getText()));
           g.FavoritosAg(m, mu);
-     }//GEN-LAST:event_jLabel5MouseClicked
+     }//GEN-LAST:event_jButton1ActionPerformed
 
      /**
       * @param args the command line arguments
       */
      public static void main(String args[]) {
           /* Set the Nimbus look and feel */
-          //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-          /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-           */
-          try {
-               for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                    if ("Nimbus".equals(info.getName())) {
-                         javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                         break;
-                    }
-               }
-          } catch (ClassNotFoundException ex) {
-               java.util.logging.Logger.getLogger(Consola.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-          } catch (InstantiationException ex) {
-               java.util.logging.Logger.getLogger(Consola.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-          } catch (IllegalAccessException ex) {
-               java.util.logging.Logger.getLogger(Consola.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-          } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-               java.util.logging.Logger.getLogger(Consola.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-          }
-          //</editor-fold>
 
           /* Create and display the form */
           java.awt.EventQueue.invokeLater(new Runnable() {
                public void run() {
                     new Consola().setVisible(true);
+                    
                }
           });
      }
@@ -292,12 +276,12 @@ public class Consola extends javax.swing.JFrame {
      private javax.swing.JButton btnInciar;
      private javax.swing.JButton btnRetroceder;
      private javax.swing.JLabel fondo;
-     private javax.swing.JComboBox<String> jComboBox1;
+     private javax.swing.JButton jButton1;
      private javax.swing.JLabel jLabel1;
      private javax.swing.JLabel jLabel2;
      private javax.swing.JLabel jLabel3;
      private javax.swing.JLabel jLabel4;
-     private javax.swing.JLabel jLabel5;
      private javax.swing.JLabel jLabel6;
+     private javax.swing.JLabel labelUsuario;
      // End of variables declaration//GEN-END:variables
 }

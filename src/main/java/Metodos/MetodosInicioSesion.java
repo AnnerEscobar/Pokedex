@@ -64,7 +64,7 @@ public class MetodosInicioSesion {
           PreparedStatement stmt = null;
           boolean correcto = false;
 
-          String Insert = "Insert into tb_usuarios (nombres, apellidos, correo, username, password, confirmpass, telefono) values (?,?,?,?,?,?,?)";
+          String Insert = "Insert into usuarios (nombre, apellidos, correo, contraseña) values (?,?,?,?)";
 
           try {
                conn = Conexion.OpenConection();
@@ -73,8 +73,7 @@ public class MetodosInicioSesion {
                stmt.setString(1, modelo.getNombres());
                stmt.setString(2, modelo.getApellidos());
                stmt.setString(3, modelo.getCorreo());
-               stmt.setString(5, modelo.getPassword());
-               stmt.setString(6, modelo.getConfirmpass());
+               stmt.setString(4, modelo.getPassword());
                stmt.execute();
 
                correcto = true;
@@ -93,7 +92,7 @@ public class MetodosInicioSesion {
           PreparedStatement stmt = null;
           ResultSet rs = null;
           boolean correcto = false;
-          String sql = "select *from tb_usuarios where username = '" + usuario + "'and password = '" + pass + "' ";
+          String sql = "select *from usuarios where correo = '" + usuario + "'and contraseña = '" + pass + "' ";
 
           try {
                conn = Conexion.OpenConection();
