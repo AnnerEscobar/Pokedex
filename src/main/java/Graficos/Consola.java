@@ -104,6 +104,7 @@ public class Consola extends javax.swing.JFrame {
           jLabel5 = new javax.swing.JLabel();
           jLabel6 = new javax.swing.JLabel();
           jComboBox1 = new javax.swing.JComboBox<>();
+          RaFavoritos = new javax.swing.JRadioButton();
           fondo = new javax.swing.JLabel();
 
           setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -206,7 +207,10 @@ public class Consola extends javax.swing.JFrame {
           getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(662, 340, 90, -1));
 
           jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Rare", "Mountain", "rough terrain", "sea", "cave", "rough terrain", "grassland", "forest", "urban" }));
-          getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 80, 30));
+          getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 80, 30));
+
+          RaFavoritos.setText("Favoritos");
+          getContentPane().add(RaFavoritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
 
           fondo.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
           fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\anner\\Desktop\\Universidad Mariano Galvez\\Cuarto Semestre\\Programacion II\\Homeworks\\MiniPokedex\\src\\main\\java\\Imagenes\\fondo1.1.png")); // NOI18N
@@ -233,7 +237,8 @@ public class Consola extends javax.swing.JFrame {
 
      private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
           // TODO add your handling code here:
-          mu.setUsername("annner@hotmail.com");
+        
+          mu.setCorreo("annner@hotmail.com");
           m.setId(Integer.valueOf(Lid.getText()));
           g.FavoritosAg(m, mu);
      }//GEN-LAST:event_jLabel5MouseClicked
@@ -283,6 +288,7 @@ public class Consola extends javax.swing.JFrame {
      private javax.swing.JLabel Lnombre;
      private javax.swing.JLabel Lpeso;
      private javax.swing.JPanel PokemonImagen;
+     private javax.swing.JRadioButton RaFavoritos;
      private javax.swing.JButton btnInciar;
      private javax.swing.JButton btnRetroceder;
      private javax.swing.JLabel fondo;

@@ -8,32 +8,29 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class TraerInfo {
 
      ModeloPokemon model = new ModeloPokemon();
-     
-     
-     
+
      public List<ModeloPokemon> TraerInformacion(int contador) {
-         
-          List<ModeloPokemon> ListaPokemon = new ArrayList<ModeloPokemon>();
+
+          List<ModeloPokemon> ListaPokemon = new ArrayList<>();
           Connection conn = null;
           PreparedStatement stmt = null;
           ResultSet rs = null;
 
           try {
-               
+
                String sql = "select *from pokemon where id=" + (contador + 1);
                conn = Conexion.OpenConection();
                stmt = conn.prepareStatement(sql);
                rs = stmt.executeQuery();
 
-               if(rs.next()) {
-                    
+               if (rs.next()) {
+
                     model.setId(rs.getInt(1));
                     model.setName(rs.getString(2));
                     model.setHeight(rs.getString(10));
@@ -42,10 +39,9 @@ public class TraerInfo {
                     model.setColor(rs.getString(13));
                     model.setHabitat(rs.getString(15));
                     model.setBase_experience(rs.getString(18));
-                   
 
-               }else{
-                    
+               } else {
+
                     model.setId(model.getId());
                     model.setName("NO TENGO INFORAMCION");
                     model.setHeight("***");
@@ -54,10 +50,10 @@ public class TraerInfo {
                     model.setColor("***");
                     model.setHabitat("***");
                     model.setBase_experience("***");
-                     
+
                }
-                ListaPokemon.add(model);
-             
+               ListaPokemon.add(model);
+
                System.out.println(model.getName());
           } catch (SQLException ex) {
                JOptionPane.showMessageDialog(null, ex + "No se pudo desplegar tu informacion");
@@ -69,8 +65,7 @@ public class TraerInfo {
           return ListaPokemon;
      }
 
-     
-      public void asignar(JLabel Lnombre, JLabel Laltura, JLabel Lpeso, JLabel Lespecie, JLabel Lcolor, JLabel Lhabitad, JLabel Lexperiencia, JLabel Lid) {
+     public void asignar(JLabel Lnombre, JLabel Laltura, JLabel Lpeso, JLabel Lespecie, JLabel Lcolor, JLabel Lhabitad, JLabel Lexperiencia, JLabel Lid) {
 
           Lnombre.setText(model.getName());
           Laltura.setText(model.getHeight());
@@ -82,7 +77,5 @@ public class TraerInfo {
           Lid.setText(String.valueOf(model.getId()));
 
      }
-      
-      
-      
+
 }

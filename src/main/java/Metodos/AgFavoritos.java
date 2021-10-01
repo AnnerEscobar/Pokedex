@@ -24,7 +24,7 @@ public class AgFavoritos {
                stmt = conn.prepareStatement(Insert);
 
                stmt.setInt(1, modelo1.getId());
-               stmt.setString(2, modelo2.getUsername());
+               stmt.setString(2, modelo2.getCorreo());
                stmt.execute();
                correcto = true;
           } catch (SQLException ex) {

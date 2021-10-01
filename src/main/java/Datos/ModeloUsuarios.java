@@ -11,20 +11,19 @@ package Datos;
  */
 public class ModeloUsuarios {
 
-     private int correlativo;
+     private int id;
      private String nombres;
      private String apellidos;
      private String correo;
-     private String username;
      private String password;
      private String confirmpass;
 
-     public int getCorrelativo() {
-          return correlativo;
+     public int getId() {
+          return id;
      }
 
-     public void setCorrelativo(int correlativo) {
-          this.correlativo = correlativo;
+     public void setId(int id) {
+          this.id = id;
      }
 
      public String getNombres() {
@@ -51,14 +50,6 @@ public class ModeloUsuarios {
           this.correo = correo;
      }
 
-     public String getUsername() {
-          return username;
-     }
-
-     public void setUsername(String username) {
-          this.username = username;
-     }
-
      public String getPassword() {
           return password;
      }
@@ -75,4 +66,7 @@ public class ModeloUsuarios {
           this.confirmpass = confirmpass;
      }
      
+     
+     
+
 }
